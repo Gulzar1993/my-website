@@ -2,7 +2,43 @@ name: My First CI
 
 on:
   push:
+    pull_request:
+name: My First CI
 
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say hello
+        run: echo "Hello JumpToTech CI"
+
+      - name: Check index.html exists
+        run: test -f index.html
+
+      - name: Finish
+        run: echo "CI PASSED"
+name: My First CI
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say hello
+        run: echo "Hello JumpToTech CI"
+
+      - name: Check index.html exists
+        run: test -f index.html
+
+      - name: Finish
+        run: echo "CI PASSED"
 permissions:
   contents: read
 
